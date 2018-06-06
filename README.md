@@ -8,4 +8,4 @@ https://trello.com/b/UchhT1sO/the-unit
 
 ## Wireframe 
 
-https://github.com/elshack09/wig-app/blob/master/wig-wireframe.jpg 
+(https://github.com/elshack09/wig-app/blob/master/wig-wireframe.jpg)
