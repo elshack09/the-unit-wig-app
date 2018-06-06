@@ -10,3 +10,4 @@ https://trello.com/b/UchhT1sO/the-unit
 
 https://github.com/elshack09/wig-app/blob/master/images/wig-wireframe.jpg 
 
+![Image of Yaktocat](https://github.com/elshack09/wig-app/blob/master/images/wig-wireframe.jpg )
