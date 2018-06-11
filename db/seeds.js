@@ -1,8 +1,39 @@
-const Account = require('../models/customer');
+const Wig = require('../models/customer');
 
-const newAccounts = newAccount ({
-    name: String,
-    email: String,
-    password: String
-
-})
+const wigs = [
+    new Wig({
+        title: 'Straight Hair Texture',
+        texture: 'http://cdn7.bigcommerce.com/s-c8yvxoqyiv/images/stencil/1280x1280/products/288/1621/IMG_2871_Facetune_25-01-2018-12-02-50__58410.1516904318.JPG?c=2&imbypass=on&imbypass=on',
+        length: 'Medium Length',
+        cap: 'Small Cap',
+        price: 200
+    }),
+    new Wig({
+        title: 'Wavy Hair Texture',
+        texture: 'http://cdn7.bigcommerce.com/s-c8yvxoqyiv/images/stencil/1280x1280/products/285/1624/IMG_2882_Facetune_25-01-2018-13-22-10_3__18515.1516911842.JPG?c=2&imbypass=on&imbypass=on',
+        length: 'Medium Length',
+        cap: 'Large Cap',
+        price: 300
+    }),
+    new Wig({
+        title: 'Curly Hair Texture',
+        texture: 'http://cdn7.bigcommerce.com/s-c8yvxoqyiv/images/stencil/1280x1280/products/121/1743/IMG_2918_Facetune_25-01-2018-16-54-04__26331.1516927232.1280.1280__93031.1516947096.jpg?c=2&imbypass=on&imbypass=on',
+        length: 'Medium Length',
+        cap: 'Medium Cap',
+        price: 275
+    }),
+    new Wig({
+        title: 'Kinky Hair Texture',
+        texture: 'http://cdn7.bigcommerce.com/s-c8yvxoqyiv/images/stencil/380x507/products/127/1783/IMG_2931_Facetune_25-01-2018-18-20-50__53484.1516930545.1280.1280__32031.1517090967.1280.1280__15996.1517091049.jpg?c=2&imbypass=on',
+        length: 'Short Length',
+        cap: 'Large Cap',
+        price: 150
+    }),
+    new Wig({
+        title: 'Loose Wave Hair Texture',
+        texture: 'http://polly-products.com/wp-content/uploads/2014/06/Medium-Height-Mannequin-Heads-15-to-17.5-inches-H.jpg',
+        length: 'Short Length',
+        cap: 'Small Cap',
+        price: 225
+    }),
+];
