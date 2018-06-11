@@ -10,8 +10,8 @@ router.get('/', function(req, res, next) {
 router.get('/user/account', function(req,res,next){
   res.render('user/account');
 });
-router.post('/user/account', function(req,res,next){
+router.post('/user', function(req,res,next){
   res.render()
-}
+})
 
 module.exports = router;

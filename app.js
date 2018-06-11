@@ -14,16 +14,27 @@ const passport = require('passport');
 
 
 const routes = require('./routes/index');
+const productRoute= require('./routes/product');
 
 const app = express();
 //connecting mongoose
-mongoose.connect('localhost:27017/theUnit');
+mongoose.connect('mongodb://localhost/theUnit')
+  .then(() => {
+    console.log('   ===============================  ')
+    console.log('   CONNECTION TO MONGO ESTABLISHED  ')
+    console.log('   ===============================  ')
+  })
+  .catch((err) => {
+    console.log('ERROR', err)
+  })
+
+
 
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
-
+// middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
@@ -33,8 +44,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //homepage
 app.use('/', routes);
-
-
+app.use('/product', productRoute)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
