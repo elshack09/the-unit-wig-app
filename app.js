@@ -1,3 +1,5 @@
+// packages
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -6,8 +8,12 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const expressHbs = require('express-handlebars');
 const mongoose = require('mongoose');
+const passport = require('passport');
 
-const indexRouter = require('./routes/index');
+
+
+
+const routes = require('./routes/index');
 
 const app = express();
 //connecting mongoose
@@ -25,8 +31,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//homepage
+app.use('/', routes);
 
-app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
