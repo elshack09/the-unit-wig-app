@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
 });
 });
 router.post('/', function (req, res, next) {
-    res.render('store/wigs')
+    res.redirect('wigs')
 });
 
 module.exports = router;
