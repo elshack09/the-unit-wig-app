@@ -9,6 +9,7 @@ const logger = require('morgan');
 const expressHbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const passport = require('passport');
+require ('dotenv').config();
 
 
 
@@ -53,21 +54,21 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-//  if (process.env.MONGODB_URI) {
-//     mongoose.connect(process.env.MONGODB_URI);
-//   }
-//   else {
-//     mongoose.connect('mongodb://localhost/theUnit');
-//   }
-//   mongoose.connection.on('error', function (err) {
-//     console.error('MongoDB connection error: ' + err);
-//     process.exit(-1);
-//   }
-//   );
+ if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI);
+  }
+  else {
+    mongoose.connect('mongodb://localhost/theUnit');
+  }
+  mongoose.connection.on('error', function (err) {
+    console.error('MongoDB connection error: ' + err);
+    process.exit(-1);
+  }
+  );
 
-// mongoose.connection.once('open', function () {
-//   console.log("Mongoose has connected to MongoDB!");
-// });
+mongoose.connection.once('open', function () {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 
 
