@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 require ('dotenv').config();
 
+mongoose.connect(process.env.MONGODB_URI);
 
 
 
