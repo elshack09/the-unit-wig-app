@@ -57,7 +57,7 @@ app.use(function(req, res, next) {
     mongoose.connect(process.env.MONGODB_URI);
   }
   else {
-    mongoose.connect('mongodb://localhost/theUnit');
+    mongoose.connect('mongodb://localhost/27107');
   }
   mongoose.connection.on('error', function (err) {
     console.error('MongoDB connection error: ' + err);
