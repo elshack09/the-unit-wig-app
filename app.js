@@ -44,7 +44,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //homepage
 app.use('/', routes);
-app.use('/wigs', wigRoute)
+// wig route page
+app.use('/store/wigs', wigRoute)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

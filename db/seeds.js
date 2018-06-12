@@ -45,13 +45,6 @@ Wig.remove()
             cap: 'Large Cap',
             price: 150
         }),
-        new Wig({
-            title: 'Loose Wave Hair Texture',
-            texture: 'http://polly-products.com/wp-content/uploads/2014/06/Medium-Height-Mannequin-Heads-15-to-17.5-inches-H.jpg',
-            length: 'Short Length',
-            cap: 'Small Cap',
-            price: 225
-        }),
     ];
 
 
@@ -87,13 +80,6 @@ const wigs = [
         length: 'Short Length',
         cap: 'Large Cap',
         price: 150
-    }),
-    new Wig({
-        title: 'Loose Wave Hair Texture',
-        texture: 'http://polly-products.com/wp-content/uploads/2014/06/Medium-Height-Mannequin-Heads-15-to-17.5-inches-H.jpg',
-        length: 'Short Length',
-        cap: 'Small Cap',
-        price: 225
     }),
 ];
 // goes through all wigs type products
