@@ -15,6 +15,7 @@ const passport = require('passport');
 
 const routes = require('./routes/index');
 const wigRoute= require('./routes/wigs');
+const userRoute= require('./routes/user');
 
 const app = express();
 //connecting mongoose
@@ -46,6 +47,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 // wig route page
 app.use('/store/wigs', wigRoute)
+// user route
+app.use('/store/user', userRoute)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -17,8 +17,5 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
     res.render('store/wigs')
 });
-router.get('/:wigId', function (req, res, next) {
-
-})
 
 module.exports = router;
