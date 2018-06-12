@@ -9,9 +9,9 @@ const logger = require('morgan');
 const expressHbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const passport = require('passport');
-require ('dotenv').config();
+// require ('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect(process.env.MONGODB_URI);
 
 
 
