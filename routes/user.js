@@ -14,7 +14,7 @@ router.post('/store/user', function(req, res, next) {
         email: req.body.email,
         password: req.body.password
     })
-    // customer.save();
+    customer.save();
     res.redirect('/store/wigs')
     }) 
   
