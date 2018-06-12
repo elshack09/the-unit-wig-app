@@ -6,13 +6,13 @@ https://stormy-brushlands-38513.herokuapp.com/
 
 ## Technologies Used
 ### Front-End
--Handlebars
--Bootstrap
+*Handlebars
+*Bootstrap
 ### Back-End
--MongoDB
--Mongoose
--Express
--Node.js
+*MongoDB
+*Mongoose
+*Express
+*Node.js
 
 ## Trello Board 
 https://trello.com/b/UchhT1sO/the-unit
