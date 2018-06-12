@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
     for (let w = 0; w < docs.length; w += wigProducts){
         wigArray.push(docs.slice(w, w + wigProducts));
     }
-    res.render('store/wigs', { title: 'wigs', wigs: wigArray});
+    res.render('store/wigs', { title: 'Wig List', wigs: wigArray});
 });
 });
 router.post('/', function (req, res, next) {
