@@ -11,7 +11,7 @@ const methodOverride = require("method-override");
 const routes = require("./routes/index");
 const wigRoute = require("./routes/wigs");
 const userRoute = require("./routes/user");
-
+//test
 const app = express();
 //connecting mongoose
 require("dotenv").config();
