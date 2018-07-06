@@ -1,5 +1,4 @@
 // packages
-
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -9,34 +8,22 @@ const logger = require('morgan');
 const expressHbs = require('express-handlebars');
 const methodOverride = require('method-override')
 
-const mongoose = require('mongoose');
-
-require ('dotenv').config();
-
-mongoose.connect(process.env.MONGODB_URI);
-
-
-
 const routes = require('./routes/index');
 const wigRoute= require('./routes/wigs');
 const userRoute= require('./routes/user');
 
 const app = express();
 //connecting mongoose
-mongoose.connect('mongodb://localhost/theUnit')
-  .then(() => {
-    console.log('connected')
+require('dotenv').config();
 
-  })
-  .catch((err) => {
-    console.log('ERROR', err)
-  })
-
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI); 
  
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 // middleware
+app.use(methodOverride('_method'))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
@@ -50,11 +37,6 @@ app.use('/', routes);
 app.use('/store/wigs', wigRoute)
 // user route
 app.use('/store/user', userRoute)
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
 
 // error handler
 app.use(function(err, req, res, next) {
